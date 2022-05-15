@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\fiot-hdvn-t"
+		},
+		{
+			"path": "..\\fiot-hdvn-a"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "learning_js"
+	}
+}
