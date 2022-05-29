@@ -1,34 +1,34 @@
-// var courseAPI='http://localhost:3000/courses';
+var courseAPI='http://localhost:3000/courses';
 
-// fetch(courseAPI)
-// .then(function(response){
-//     return response.json();
-// })
-// .then(function(courses){
-//     console.log(courses)
-// })
+fetch(courseAPI)
+.then(function(response){
+    return response.json();
+})
+.then(function(courses){
+    console.log(courses)
+})
 
-var listCoursesBlock = document.querySelector("#list-courses");
+// var listCoursesBlock = document.querySelector("#list-courses");
 
-var courseAPI = "http://localhost:3000/courses";
+// var courseAPI = "http://localhost:3000/courses";
 
-function start() {
+// function start() {
     
-//   getCourses(function (courses) {
-//     renderCourses(courses)
-//   });
-getCourses(renderCourses())
-}
+// //   getCourses(function (courses) {
+// //     renderCourses(courses)
+// //   });
+// getCourses(renderCourses())
+// }
 
-start();
+// start();
 
-function getCourses(callback) {
-  fetch(courseAPI)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(callback);
-}
+// function getCourses(callback) {
+//   fetch(courseAPI)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(callback);
+// }
 
 function renderCourses(courses){
     var listCoursesBlock = document.querySelector("#list-courses");

@@ -1,39 +1,46 @@
-Array.prototype.map2=function(callBack){
-    // var arrayLength=this.length, ouput=[];
+// alert(true)
+// Array.prototype.test2=function(callback){
 
-    // for(var i=0;i<arrayLength;i++){
-    //     // console.log(callBack(this[i]));
-    //     var result =callBack(this[i]);
-    //     console.log(result)
-    //     ouput.push(result)
-    //     console.log(result)
-    // }
-    for(var index in this){
-        // if(this.hasOwnProperty(index)){ // Diều kiện loại bỏ các property không phải là index thuần
-            callBack(this[index],index,this )
-        // }
+//    var  sum=this[1]+this[0]
+//   return callback(sum,this[1],this[0])+3
+// }
+// var arr=[1,2]
+// var c= arr.test2(function(a1,a2,a3){
+//     return a1+a2+a3 //--> 6
+// })
+// console.log(c) --> 9
+
+array=[1,2,3]
+
+Array.prototype.forEach2=function(callback){
+    length=Array.length;
+    for (var i=0;i<this.length;i++){
+        callback(this[i],i)
+
+    }
+   return 
+}
+console.log(array.forEach2(function(value,index){
+    // console.log(value,index)
+    return value
+}))
+
+Array.prototype.filter2=function(callback){
+    var output=[]
+    length=Array.length;
+    for (var i=0;i<this.length;i++){
+        if(this.hasOwnProperty(i)){
+            if(callback(this[i],i,this)){
+                output.push(this[i])
+            }
+
+        }
         
     }
-
+  return output;
 }
-var courses=[
-    'PHP',
-    'js',
-    'Ruby'
-]
-var test=courses.map2(function(course, index,array){
-    // return `<h2>${course}</h2>`
-    console.log(course, index)
-})
-// console.log(test)
+console.log(array.filter2(function(element, index, array){
+    // console.log('e',element, 'i',index,'a', array)
+    return index>1
 
-
-// 1 object prototype
-// 2 For in
-// hasOwwnProperty
-
-
-
-//Filter
-Array.prototype.filter2=function(callBack){
-}
+}))
