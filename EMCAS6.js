@@ -92,7 +92,77 @@
 // var{ name:parrentName}=course_test_object;
 // console.log(course_test_object)
 
-function logger(...params){
-console.log(params)
+// function logger(a,...params){
+// console.log(params)
+// }
+// logger(1,2,3)
+
+// spread
+
+// logger({
+//     name:'js',
+//     price:1000,
+//     description:'Description content'
+// })
+
+// function logger({name,price,...rest}){
+//     console.log(name,price)
+//     console.log(rest)
+// }
+/* SPREAD REST
+var courses =['js','ruby','php']
+var courses2 =['rs','nodejs']
+var courses3 =[...courses2,...courses]
+console.log(courses3)
+
+var oB1={
+    name:'Toàn'
 }
-logger(1,2,3)
+var oB2={
+    price:'15000'
+}
+var oB3={
+  ...oB1,
+  ...oB2
+}
+console.log( oB3)
+
+
+var defaultConfig={
+    api:'http://domain-trang-khoa-hoc',
+    apiVerrsion:'v1',
+}
+
+var exConfig={
+    ...defaultConfig,
+    api:'https://Trang-bai-tap',
+}
+console.log(exConfig)
+
+// Spread truyền tham số cho hàm
+function logger(a,b,c){
+    console.log(a,b,c)
+}
+
+logger(...courses)
+
+SPREAD REST */
+
+// function highlight([first,...strings],...value){
+//     console.log('string:',strings);
+//     console.log('first:',first);
+//     console.log('value:',value);
+
+//     return value.reduce(
+//         (acc,curr)=> [...acc,`<span>${curr}</span>`,strings.shift()],
+//         [first]
+//     ).join('' )
+// }
+
+// var brand='F8';
+// var course='JAvascript';
+
+// html=highlight`Hoc lập trình  ${course} tại ${brand}!`
+// console.log(html)
+
+//  Module hóa
